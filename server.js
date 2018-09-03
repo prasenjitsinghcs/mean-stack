@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 app.get('*', (req, res)=>{
-    res.send('Welcome to What is MEAN stack - Prasenjit Singh & Priyanka Test for Code Pipline');
+    res.render('pages/index');
 });
 
 app.listen(3000);
